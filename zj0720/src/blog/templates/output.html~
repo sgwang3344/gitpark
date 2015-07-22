@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>aaaaaaaaaaaaaaaa</title>
+</head>
+<body>
+
+{%if nothing_boo%}
+<h1>Nothing~</h1>
+{%endif%}
+
+
+{%if manager_boo%}
+
+<h1>{{searched_group}}经纪人</h1>
+<h1>{{manager_information.count}}</h1>
+{%if manager_information%}
+
+{% for m in manager_information %}
+<li>{{m}}</li>
+{%endfor%}
+
+{%else%}
+<li>Nothing!!经纪人</li>
+{%endif%}
+
+{%endif%}
+
+
+
+{%if house_boo%}
+
+<h1>{{searched_group}}租房信息</h1>
+
+{%if house_information%}
+<ul >
+{% for h in house_information%}
+
+<li>{{h}}</li>
+
+{%endfor%}
+</ul>
+{%else%}
+<li>Nothing!!租赁</li>
+{%endif%}
+
+{%endif%}
+
+
+
+
+
+
+
+
+
+{% for a in author %}
+<div>
+<h1>{{a}}</h1>
+{% for b in a.book_set.all %}
+
+<li>{{b}}</li>
+
+{%endfor%}
+
+
+
+</div>
+{%endfor%}
+
+
+
+</body>
+</html>

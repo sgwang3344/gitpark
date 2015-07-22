@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>aaaaaaaaaaaaaaaa</title>
+</head>
+<body>
+{{author}}
+<br>
+
+{{book}}
+
+{% for b in book %}
+<div>
+<h1>{{b}}</h1>
+{% for a in b.authors.all %}
+
+<li>{{a}}</li>
+
+{%endfor%}
+
+
+
+</div>
+{%endfor%}
+</body>
+</html>
